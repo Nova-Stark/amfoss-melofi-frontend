@@ -1,14 +1,20 @@
-import styles from './LoginCard.module.css';
+import styles from './SignUpCard.module.css';
 import profile from '../assets/melofi.png';
 
-export default function LoginCard() {
+export default function SignUpCard() {
   return (
     <div className={styles['login-card']}>
 
       <div className={styles['form-section']}>
-        <h2>Log In</h2>
+        <h2>Sign Up</h2>
         
         <form>
+
+        <div className={styles['input-group']}>
+            <label htmlFor="username">Username</label>
+            <input type="text" id="username" />
+        </div>
+
 
           <div className={styles['input-group']}>
             <label htmlFor="email">User email</label>
@@ -21,20 +27,14 @@ export default function LoginCard() {
           </div>
 
           <div className={styles['login-button-area']}>
-
           <button type="submit" className={styles['login-button']}>
-            Log In
+            Sign Up
           </button>
-          
           </div>
-
+          
         </form>
 
 
-        <p className={styles['signup-text']}>
-          Don't have an account? <a href="#">Sign Up</a>
-        </p>
-        
         
         </div>
                 <img src={profile} alt="" />
