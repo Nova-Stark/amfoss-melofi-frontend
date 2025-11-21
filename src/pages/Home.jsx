@@ -1,10 +1,11 @@
-import SongCard from '../components/SongCard';
+import SongCard from '../components/SongCard.jsx';
 import './Home.page.css';
+import SearchBar from '../components/SearchBar.jsx';
 
 export default function Home() {
   return (
     <div>
-        <SongCard />
+        <SearchBar />
     </div>
   );
 

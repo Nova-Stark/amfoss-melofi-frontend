@@ -1,0 +1,30 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #27272A; 
+    border-radius: 40px; 
+    padding: 8px 15px; 
+    height: 50px; 
+    width: 600px; 
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+.sico {
+    width: 20px; 
+    height: 20px;
+    margin-right: 10px; 
+}
+
+.search-bar input {
+    flex-grow: 1; 
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #d0d0d0;
+    font-size: 20px;
+}
+
+.search-bar input::placeholder {
+    color: #949494; 
+}
