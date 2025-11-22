@@ -1,0 +1,143 @@
+.sidebar {
+    background-color: #0A0A0B;
+    color: #fff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 280px;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.profileSection {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.profilePic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.webName {
+    color: #60A5FA;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.username {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.librarySection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.libraryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.libraryHeader h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #60A5FA;
+    margin: 0;
+}
+
+.addSign {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.playlistOption {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #0f0c25;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+.playlistItem {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.playlistTitle {
+    background-color: #282828;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.playlistName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.songMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 4px;
+    width: 90%;
+    padding-left: 8%;
+}
+
+.song {
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #b3b3b3;
+    font-size: 14px;
+    background-color: transparent;
+    margin-left: -12px;
+    margin-right: -12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song.active {
+    background-color: #404040;
+    color: #fff;
+}
+
+.emptyMsg {
+    color: #b3b3b3;
+    padding: 10px;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.chevronIcon {
+    color: #ffffff;
+    flex-shrink: 0; 
+}
