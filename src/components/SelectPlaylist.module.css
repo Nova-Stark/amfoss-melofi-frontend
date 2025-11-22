@@ -1,0 +1,47 @@
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #27272A;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.selectPlaylistContainer {
+    background-color: transparent; 
+    margin: 0; 
+    border-radius: 0; 
+    padding: 0; 
+    width: auto; 
+    height: auto;
+    overflow: visible; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+
+.selectPlaylistContainer button{
+    flex-grow: 0; 
+    border: none;
+    outline: none;
+    background-color: #595959; 
+    color: #ffffff;
+    font-size: 20px;
+    width: 300px; 
+    padding: 12px 30px; 
+    text-align: center; 
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: background-color 0.2s ease; 
+}
+
+.selectPlaylistContainer button:hover {
+    background-color: #6a6a6a; 
+}
