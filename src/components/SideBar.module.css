@@ -76,6 +76,7 @@
     background-color: #0f0c25;
     border-radius: 20px;
     padding: 5%;
+    overflow-y: auto;
 }
 
 .playlistItem {

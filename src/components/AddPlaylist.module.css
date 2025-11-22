@@ -1,0 +1,47 @@
+
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #27272A;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.addPlaylistContainer {
+    background-color: #595959;
+    margin: 20px;
+    border-radius: 15px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 75%;
+    width: 20%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.addPlaylistContainer input {
+     flex-grow: 0; 
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    width: 200px;
+    padding-left: 10px;
+
+}
+
+.addPlaylistContainer input::placeholder {
+    color: #949494; 
+}
