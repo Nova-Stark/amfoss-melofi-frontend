@@ -41,8 +41,8 @@ export default function Player({thumbnailpic = thumbnail , songname = "Songname"
     return (
         <div>
             <div className='thumbnail-container'>
-                <img src={thumbnailpic} alt={thumbnail} />
-                <img src={backarrow} alt="" />
+                <img src={thumbnailpic} alt={thumbnail} className='ogthumbnail' />
+                <img src={backarrow} alt="" className='backarrow'/>
             </div>
             
             <div className='song-details'>
