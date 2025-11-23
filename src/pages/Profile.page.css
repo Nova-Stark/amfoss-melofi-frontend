@@ -10,7 +10,7 @@ body {
     color: #fff;
 }
 
-.page-container {
+.profilepage-container {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: auto 1fr; 
@@ -152,9 +152,5 @@ body {
     align-items: flex-start;
     margin-top: -100px;
     margin-left: 120px; 
-}
-
-.recently-played-section > div {
-    width: 65%; 
 }
 

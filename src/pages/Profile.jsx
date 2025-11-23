@@ -5,7 +5,7 @@ import backarrow from '../assets/backarrow.svg'
 
 export default function Profile({profileimg = profile , username = 'Username' , useremail = 'Useremail@gmail.com'}) {
     return (
-        <div className='page-container'>
+        <div className='profilepage-container'>
             <div className="profile-section">
                 <div className="profile-image-container"> 
                     <img src={profileimg} alt={profile} />
