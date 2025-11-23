@@ -40,6 +40,7 @@ export default function Player({thumbnailpic = thumbnail , songname = "Songname"
     };
     return (
         <div>
+            <div className='song-area'>
             <div className='thumbnail-container'>
                 <img src={thumbnailpic} alt={thumbnail} className='ogthumbnail' />
                 <img src={backarrow} alt="" className='backarrow'/>
@@ -53,6 +54,8 @@ export default function Player({thumbnailpic = thumbnail , songname = "Songname"
                 <div className='addsign'>
                     <img src={plusimg} alt="" />
                 </div>
+            </div>
+
             </div>
 
             <footer className='player-footer'>

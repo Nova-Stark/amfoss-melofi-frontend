@@ -3,20 +3,9 @@ import './Profile.page.css';
 import profile from '../assets/man.png'
 import backarrow from '../assets/backarrow.svg'
 
-export default function Profile({profileimg = profile , username = 'Username' , useremail = 'Useremail@gmail.com'}) {
+export default function Profile({profileimg = profile , username = 'Tony Stark' , useremail = 'tonystark@gmail.com'}) {
     return (
         <div className='profilepage-container'>
-            <div className="profile-section">
-                <div className="profile-image-container"> 
-                    <img src={profileimg} alt={profile} />
-                </div>
-
-
-                <div className='user-info'>
-                    <h2>{username}</h2>
-                    <h3>{useremail}</h3>
-                </div>
-            </div>
 
             <div className='web-header-container'>
                 <div className='webname'>
@@ -24,21 +13,40 @@ export default function Profile({profileimg = profile , username = 'Username' , 
                 </div>
 
                 <div className='gobackarrow'>
-                    <img src={backarrow} alt="" />
+                    <img src={backarrow} alt="go back" />
                 </div>
             </div>
 
-            <div className='account-buttons'>
-                <button className='logout-button'>Log Out</button>
-                <button className='delete-button'>Delete Account</button>
-            </div>
+            <div className='profile-body-container'>
+                <div className='profile-left-section'>
+                    <div className="profile-section">
+                        <div className="profile-image-container">
+                            <img src={profileimg} alt={username} />
+                        </div>
 
-            <div className="recently-played-section">
-                <Verticalcomponent />
+
+                        <div className='user-info'>
+                            <h2>{username}</h2>
+                            <h3>{useremail}</h3>
+                        </div>
+                    </div>
+
+                    <div className="account-details">
+                        <div className="logout-and-stats">
+                            <button className='logout-button'>Log Out</button>
+                            <div className='user-stats'>
+                                <p>Followers 1M</p>
+                                <p>Subscribers 500K</p>
+                            </div>
+                        </div>
+                        <button className='delete-button'>Delete Account</button>
+                    </div>
+                </div>
+
+                <div className="recently-played-section">
+                    <Verticalcomponent />
+                </div>
             </div>
-            
         </div>
-
     );
 }
-

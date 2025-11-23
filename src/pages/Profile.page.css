@@ -6,151 +6,162 @@
 }
 
 body {
-    background-color: #000000; 
+    background-color: #000000;
     color: #fff;
 }
 
 .profilepage-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: auto 1fr; 
-    grid-template-areas:
-        "profile-info web-header"
-        "buttons-area recently-played-area";
-    padding: 0;
-    margin-left: -150px;
-    gap: 20px; 
-    min-height: 100vh; 
-    overflow: hidden;
+    padding: 20px 40px;
+    min-height: 100vh;
 }
 
-.profile-section {
-    padding: 0;
-    grid-area: profile-info; 
+.web-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.webname h1 {
+    color: #60A5FA;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.gobackarrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gobackarrow img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.profile-body-container {
+    display: flex;
+    gap: 80px;
+}
+
+.profile-left-section {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; 
-    padding-top: 50px; 
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
 }
 
 .profile-image-container {
-    width: 150px; 
+    width: 150px;
     height: 150px;
-    border-radius: 50%; 
+    border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #007AFF; 
+    border: 3px solid #007AFF;
     margin-bottom: 20px;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
 }
 
 .profile-image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    border-radius: 50%; 
+    object-fit: cover;
 }
 
 .user-info {
     text-align: center;
-    margin-bottom: 30px; 
 }
 
 .user-info h2 {
-    font-size: 2rem; 
+    font-size: 2.5rem;
     color: #ffffff;
     margin-bottom: 5px;
 }
 
 .user-info h3 {
-    font-size: 1rem; 
-    color: #cccccc; 
+    font-size: 1.1rem;
+    color: #cccccc;
     font-weight: normal;
 }
 
-.web-header-container {
-    grid-area: web-header; 
-    display: flex;
-    justify-content: flex-end; 
-    align-items: center; 
-    gap: 15px; 
-    padding-top: 20px; 
-}
-
-.webname {
-    
-    display: flex; 
-    align-items: center;
-}
-
-.webname h1 {
-    color: #60A5FA; 
-    font-size: 5rem;
-    font-weight: bold;
-    margin-left: -120%;
-    padding-bottom: 30%;
-}
-
-.gobackarrow {
-    
-    display: flex; 
-    align-items: center;
-    padding: 0;
-    padding-bottom: 20%;
-}
-
-.gobackarrow img {
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-}
-
-.account-buttons {
-    grid-area: buttons-area; 
+.account-details {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    align-items: center; 
-    padding-top: 0; 
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+    padding-left: 50px;
 }
 
-.account-buttons button {
-    padding: 12px 25px;
-    border-radius: 25px; 
+.logout-and-stats {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.user-stats p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.account-buttons button, .logout-button, .delete-button {
+    padding: 10px 20px;
+    border-radius: 20px;
     border: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
-    width: 200px; 
     font-weight: bold;
     transition: background-color 0.2s ease-in-out;
 }
 
 .logout-button {
-    background-color: #60A5FA; 
+    background-color: #60A5FA;
     color: #ffffff;
+    width: 120px;
 }
 
 .logout-button:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3;
 }
 
 .delete-button {
-    background-color: #FF3B30; 
+    background-color: #FF3B30;
     color: #ffffff;
+    width: 150px;
 }
 
 .delete-button:hover {
-    background-color: #cc0000; 
+    background-color: #cc0000;
 }
 
 .recently-played-section {
-    grid-area: recently-played-area;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: -100px;
-    margin-left: 120px; 
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    width: 180vh;
 }
 
+.recently-played-section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}
