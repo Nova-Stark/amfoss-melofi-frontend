@@ -134,3 +134,22 @@ body {
     background-color: #3b82f6;
     border-radius: 5px;
 }
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+.blur {
+    filter: blur(5px);
+    pointer-events: none;
+}

@@ -11,6 +11,13 @@
     background-color: #27272A;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+}
+
+.popup h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .selectPlaylistContainer {

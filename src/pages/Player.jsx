@@ -35,10 +35,16 @@ export default function Player({thumbnailpic = thumbnail , songname = "Songname"
     artistname = "Artistname", duration = "00:00",isplaying: initialIsPlaying = false})  {
     const navigate = useNavigate();
     const [isPlaying, setIsPlaying] = useState(initialIsPlaying);
+    const [showSelectPlaylist, setShowSelectPlaylist] = useState(false);
 
     const handlePlayPause = () => {
         setIsPlaying(!isPlaying);
     };
+
+    const toggleSelectPlaylistPopup = () => {
+        setShowSelectPlaylist(prev => !prev);
+    }
+
     return (
         <div>
             <div className='song-area'>
@@ -52,7 +58,7 @@ export default function Player({thumbnailpic = thumbnail , songname = "Songname"
                     <h2>{songname}</h2>
                     <h3>{artistname}</h3>
                 </div>
-                <div className='addsign'>
+                <div className='addsign' onClick={toggleSelectPlaylistPopup}>
                     <img src={plusimg} alt="" />
                 </div>
             </div>
@@ -72,6 +78,13 @@ export default function Player({thumbnailpic = thumbnail , songname = "Songname"
                 </div>
             </footer>
 
+            {showSelectPlaylist && (
+                <div className="popup-overlay" onClick={toggleSelectPlaylistPopup}>
+                    <div onClick={(e) => e.stopPropagation()}>
+                        <SelectPlaylist onClose={toggleSelectPlaylistPopup} />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

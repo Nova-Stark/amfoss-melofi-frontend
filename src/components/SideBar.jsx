@@ -48,7 +48,8 @@ export default function SideBar({username = "Username" , profilepic = profile  ,
     id: 'sample-playlist-1',
     name: 'Playlist 1',
     songs: [{ id: 'sample-song-1', title: 'samplesong' }] 
-  }] 
+  }] ,
+  onAddPlaylistClick
 }) {
     const [expandedPlaylistId, setExpandedPlaylistId] = useState(playlistdata[0].id);
     const [activeSongId, setActiveSongId] = useState(playlistdata[0].songs[0].id);
@@ -74,7 +75,7 @@ export default function SideBar({username = "Username" , profilepic = profile  ,
             <div className={styles.librarySection}>
                 <div className={styles.libraryHeader}>
                     <h3>Your Library</h3>
-                    <img src={pluspng} alt="add" className={styles.addSign}/>
+                    <img src={pluspng} alt="add" className={styles.addSign} onClick={onAddPlaylistClick} />
                 </div>
 
                 <div className={styles.playlistOption}>

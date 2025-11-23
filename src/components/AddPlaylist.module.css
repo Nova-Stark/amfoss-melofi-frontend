@@ -1,11 +1,10 @@
 
-
 .popup {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding: 0;
+    padding: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,33 +14,46 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .addPlaylistContainer {
-    background-color: #595959;
-    margin: 20px;
-    border-radius: 15px;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 10%;
-    padding-right: 75%;
-    width: 20%;
-    height: auto;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .addPlaylistContainer input {
-     flex-grow: 0; 
     border: none;
     outline: none;
-    background-color: transparent;
+    background-color: #3f3f46;
     color: #ffffff;
-    font-size: 20px;
-    width: 200px;
-    padding-left: 10px;
-
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .addPlaylistContainer input::placeholder {
-    color: #949494; 
+    color: #a1a1aa;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.saveButton, .cancelButton {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.saveButton {
+    background-color: #60A5FA;
+    color: white;
+}
+
+.cancelButton {
+    background-color: #535353;
+    color: white;
 }
