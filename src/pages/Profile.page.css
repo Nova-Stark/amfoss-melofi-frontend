@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #000000; 
+    color: #fff;
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto 1fr; 
+    grid-template-areas:
+        "profile-info web-header"
+        "buttons-area recently-played-area";
+    padding: 0;
+    margin-left: -150px;
+    gap: 20px; 
+    min-height: 100vh; 
+    overflow: hidden;
+}
+
+.profile-section {
+    padding: 0;
+    grid-area: profile-info; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    padding-top: 50px; 
+}
+
+.profile-image-container {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    overflow: hidden;
+    border: 3px solid #007AFF; 
+    margin-bottom: 20px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+.user-info h2 {
+    font-size: 2rem; 
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.user-info h3 {
+    font-size: 1rem; 
+    color: #cccccc; 
+    font-weight: normal;
+}
+
+.web-header-container {
+    grid-area: web-header; 
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    gap: 15px; 
+    padding-top: 20px; 
+}
+
+.webname {
+    
+    display: flex; 
+    align-items: center;
+}
+
+.webname h1 {
+    color: #60A5FA; 
+    font-size: 5rem;
+    font-weight: bold;
+    margin-left: -120%;
+    padding-bottom: 30%;
+}
+
+.gobackarrow {
+    
+    display: flex; 
+    align-items: center;
+    padding: 0;
+    padding-bottom: 20%;
+}
+
+.gobackarrow img {
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+}
+
+.account-buttons {
+    grid-area: buttons-area; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; 
+    padding-top: 0; 
+}
+
+.account-buttons button {
+    padding: 12px 25px;
+    border-radius: 25px; 
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 200px; 
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.logout-button {
+    background-color: #60A5FA; 
+    color: #ffffff;
+}
+
+.logout-button:hover {
+    background-color: #0056b3; 
+}
+
+.delete-button {
+    background-color: #FF3B30; 
+    color: #ffffff;
+}
+
+.delete-button:hover {
+    background-color: #cc0000; 
+}
+
+.recently-played-section {
+    grid-area: recently-played-area;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: -100px;
+    margin-left: 120px; 
+}
+
+.recently-played-section > div {
+    width: 65%; 
+}
+
