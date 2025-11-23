@@ -1,6 +1,7 @@
 import styles from './PlayBar.module.css';
 import thumbnail from '../assets/thumbnail.jpg';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PlayIcon = ({ onClick }) => (
     <svg onClick={onClick} width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -41,8 +42,9 @@ export default function PlayBar({
         setIsPlaying(!isPlaying);
     };
 
+    const navigate = useNavigate();
     return (
-        <footer className={styles.playbar}>
+        <footer className={styles.playbar} >
 
             <div className={styles.progress}>
                 <div className={styles.progressBar} style={{width: '80%'}}></div>
@@ -50,7 +52,7 @@ export default function PlayBar({
 
             <div className={styles.content}>
 
-                <div className={styles.songInfo}>
+                <div className={styles.songInfo} onClick={() => navigate("/player")}>
                     <img src={thumbnailimg} alt={songname} className={styles.thumbnail}/>
 
                     <div className={styles.textInfo}>

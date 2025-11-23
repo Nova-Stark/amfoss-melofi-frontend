@@ -4,6 +4,7 @@ import { useState } from 'react';
 import plusimg from '../assets/plus.png';
 import backarrow from '../assets/backarrow.svg';
 import SelectPlaylist from '../components/SelectPlaylist';
+import { useNavigate } from 'react-router-dom';
 
 const PlayIcon = ({ onClick }) => (
     <svg onClick={onClick} width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -32,7 +33,7 @@ const PrevIcon = () => (
 
 export default function Player({thumbnailpic = thumbnail , songname = "Songname",
     artistname = "Artistname", duration = "00:00",isplaying: initialIsPlaying = false})  {
-
+    const navigate = useNavigate();
     const [isPlaying, setIsPlaying] = useState(initialIsPlaying);
 
     const handlePlayPause = () => {
@@ -43,7 +44,7 @@ export default function Player({thumbnailpic = thumbnail , songname = "Songname"
             <div className='song-area'>
             <div className='thumbnail-container'>
                 <img src={thumbnailpic} alt={thumbnail} className='ogthumbnail' />
-                <img src={backarrow} alt="" className='backarrow'/>
+                <img src={backarrow} alt="" className='backarrow' onClick={()=> navigate("/home")}/>
             </div>
             
             <div className='song-details'>

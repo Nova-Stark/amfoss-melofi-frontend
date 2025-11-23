@@ -2,8 +2,10 @@ import Verticalcomponent from '../components/Verticalcomponent';
 import './Profile.page.css';
 import profile from '../assets/man.png'
 import backarrow from '../assets/backarrow.svg'
+import { useNavigate } from 'react-router-dom';
 
 export default function Profile({profileimg = profile , username = 'Username' , useremail = 'useremail@gmail.com'}) {
+    const navigate = useNavigate();
     return (
         <div className='profilepage-container'>
 
@@ -12,7 +14,7 @@ export default function Profile({profileimg = profile , username = 'Username' , 
                     <h1>Melofi</h1>
                 </div>
 
-                <div className='gobackarrow'>
+                <div className='gobackarrow' onClick={() => navigate("/home")}>
                     <img src={backarrow} alt="go back" />
                 </div>
             </div>
@@ -33,13 +35,13 @@ export default function Profile({profileimg = profile , username = 'Username' , 
 
                     <div className="account-details">
                         <div className="logout-and-stats">
-                            <button className='logout-button'>Log Out</button>
+                            <button className='logout-button' onClick={() => navigate("/login")}>Log Out</button>
                             <div className='user-stats'>
                                 <p>Followers 1M</p>
                                 <p>Subscribers 500K</p>
                             </div>
                         </div>
-                        <button className='delete-button'>Delete Account</button>
+                        <button className='delete-button' onClick={() => navigate("/login")}>Delete Account</button>
                     </div>
                 </div>
 

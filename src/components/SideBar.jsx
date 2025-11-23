@@ -2,7 +2,7 @@ import styles from './SideBar.module.css';
 import profile from '../assets/man.png';
 import pluspng from '../assets/plus.png';
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 
 /*
 const playlistsData = [
@@ -56,13 +56,13 @@ export default function SideBar({username = "Username" , profilepic = profile  ,
     const showplaylist = (playlistId) => {
         setExpandedPlaylistId(expandedPlaylistId === playlistId ? null : playlistId);
     }
-        
+    const navigate = useNavigate();
     return (
         <aside className={styles.sidebar}>
             
             <div className={styles.profileSection}>
 
-                <img src={profilepic} alt="profile" className={styles.profilePic}/>
+                <img src={profilepic} alt="profile" className={styles.profilePic} onClick={() => navigate("/profile")}/>
                 
                 <div className={styles.profileInfo}>
                     <h2 className={styles.webName}>Melofi</h2>

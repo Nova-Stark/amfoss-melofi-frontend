@@ -1,8 +1,13 @@
 import styles from './SignUpCard.module.css';
 import profile from '../assets/melofi.png';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function SignUpCard() {
+
+  const navigate = useNavigate();
   return (
+    
     <div className={styles['login-card']}>
 
       <div className={styles['form-section']}>
@@ -27,7 +32,7 @@ export default function SignUpCard() {
           </div>
 
           <div className={styles['login-button-area']}>
-          <button type="submit" className={styles['login-button']}>
+          <button type="submit" className={styles['login-button']} onClick={() => navigate("/home")}>
             Sign Up
           </button>
           </div>
