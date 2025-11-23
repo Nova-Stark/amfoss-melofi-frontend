@@ -7,7 +7,7 @@ export default function Verticalcomponent ({recentplaylist = [{id:'songid1',titl
 ]}){
     return (
         <div className={styles['vertical-section']}>
-            <h2>Recently Played</h2>
+
             <div className={styles['vertical-component']}>
                 {recentplaylist.map((item) => (
                     <div id={item.id} className={styles['recent-song']}>

@@ -3,7 +3,7 @@ import './Profile.page.css';
 import profile from '../assets/man.png'
 import backarrow from '../assets/backarrow.svg'
 
-export default function Profile({profileimg = profile , username = 'Tony Stark' , useremail = 'tonystark@gmail.com'}) {
+export default function Profile({profileimg = profile , username = 'Username' , useremail = 'useremail@gmail.com'}) {
     return (
         <div className='profilepage-container'>
 
@@ -44,6 +44,7 @@ export default function Profile({profileimg = profile , username = 'Tony Stark' 
                 </div>
 
                 <div className="recently-played-section">
+                    <h2>Recently Played</h2>
                     <Verticalcomponent />
                 </div>
             </div>
