@@ -1,5 +1,6 @@
 import { createContext, useState } from 'react';
 import { playlists as initialPlaylists, songs as initialSongs } from '../data';
+import profileimg from '../assets/thumbnail.jpg';
 
 export const DataContext = createContext();
 
@@ -7,12 +8,11 @@ export const DataProvider = ({ children }) => {
     const [playlists, setPlaylists] = useState(initialPlaylists);
     const [songs, setSongs] = useState(initialSongs);
 
-    // a function to add a new playlist
     const addPlaylist = (playlistName) => {
         const newPlaylist = {
             id: (playlists.length + 1).toString(),
             name: playlistName,
-            thumbnail: `https://via.placeholder.com/150`,
+            thumbnail: profileimg,
             songs: [],
         };
         setPlaylists(prevPlaylists => [...prevPlaylists, newPlaylist]);

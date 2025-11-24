@@ -14,6 +14,16 @@
 
 .playlist-header {
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-arrow {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    filter: invert(0);
 }
 
 .playlist-header h1 {
