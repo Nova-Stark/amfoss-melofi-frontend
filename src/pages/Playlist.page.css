@@ -1,0 +1,30 @@
+.playlist-page-container {
+  display: flex;
+  height: 100vh;
+  background-color: #18181b;
+  color: white;
+}
+
+.playlist-main-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-left: 280px;
+  padding-bottom: 90px;
+}
+
+.playlist-header {
+  margin-bottom: 24px;
+}
+
+.playlist-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.playlist-songcard-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}

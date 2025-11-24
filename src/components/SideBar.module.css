@@ -8,6 +8,10 @@
     width: 280px;
     height: 100vh;
     font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .profileSection {
@@ -142,4 +146,57 @@
 .chevronIcon {
     color: #ffffff;
     flex-shrink: 0; 
+}
+
+.playlistLink {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.playlistCard {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; 
+    padding: 10px;
+}
+
+.playlistCard:hover {
+    width: 100%; 
+    transform: scale(1.02); 
+    background-color: #31313f;
+}
+
+.sidebarThumbnail {
+    width: 50px; 
+    height: 50px; 
+    padding-bottom: 0 !important; 
+    margin-right: 10px; 
+    border-radius: 8px;
+}
+
+.sidebarThumbnail .song-img {
+    border-radius: 8px;
+}
+
+.playlistLink {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.playlistCard {
+    width: 100%;
+    box-sizing: border-box; /* To include padding in the 100% width */
+}
+
+.playlistCard:hover {
+    width: 100%; /* Override hover effect from SongCard.module.css */
+    transform: scale(1.02); /* A little pop effect instead */
+    background-color: #31313f;
 }

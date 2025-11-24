@@ -71,3 +71,15 @@
 .song-duration {
     flex-shrink: 0; 
 }
+
+.duration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playIcon {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 4px;
+}
