@@ -53,10 +53,18 @@ body {
 }
 
 .profile-left-section {
-    flex: 1;
+    max-width: 400px; /* Adjust as needed */
+    min-width: 300px; /* To prevent it from collapsing too much */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.profile-right-content-wrapper {
+    flex: 1; /* Takes up the remaining space */
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between "Recently Played" and "My Playlists" */
 }
 
 .profile-section {
@@ -149,13 +157,14 @@ body {
     background-color: #cc0000;
 }
 
-.recently-played-section {
-    flex: 1;
+.recently-played-section,
+.profile-playlists-section {
     margin: 0;
     padding: 0;
 }
 
-.recently-played-section h2 {
+.recently-played-section h2,
+.profile-playlists-section h2 {
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 20px;

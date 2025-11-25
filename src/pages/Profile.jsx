@@ -45,9 +45,16 @@ export default function Profile({profileimg = profile , username = 'Username' , 
                     </div>
                 </div>
 
-                <div className="recently-played-section">
-                    <h2>Recently Played</h2>
-                    <Verticalcomponent />
+                <div className='profile-right-content-wrapper'>
+                    <div className="recently-played-section">
+                        <h2>Recently Played</h2>
+                        <Verticalcomponent />
+                    </div>
+
+                    <div className="profile-playlists-section">
+                        <h2>My Playlists</h2>
+                        <Verticalcomponent />
+                    </div>
                 </div>
             </div>
         </div>
