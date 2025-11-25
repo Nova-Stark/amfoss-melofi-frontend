@@ -12,13 +12,13 @@ export default function Verticalcomponent ({recentplaylist = [
     {id:'songid8',title:'songname8',thumbnail:thumbnailpng},
     {id:'songid9',title:'songname9',thumbnail:thumbnailpng},
     {id:'songid10',title:'songname10',thumbnail:thumbnailpng}
-]}){
+], onItemClick = () => {}}){
     return (
         <div className={styles['vertical-section']}>
 
             <div className={styles['vertical-component']}>
                 {recentplaylist.map((item) => (
-                    <div id={item.id} key={item.id} className={styles['recent-song']}>
+                    <div id={item.id} key={item.id} className={styles['recent-song']} onClick={() => onItemClick(item.id)}>
                         <div className={styles['song-img']}>
                             <img src={item.thumbnail} alt={item.title} />
                         </div>

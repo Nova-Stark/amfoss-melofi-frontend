@@ -3,9 +3,23 @@ import './Profile.page.css';
 import profile from '../assets/man.png'
 import backarrow from '../assets/backarrow.svg'
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { DataContext } from '../context/DataContext';
 
 export default function Profile({profileimg = profile , username = 'Username' , useremail = 'useremail@gmail.com'}) {
     const navigate = useNavigate();
+    const { playlists } = useContext(DataContext);
+
+    const formattedPlaylists = playlists.map(playlist => ({
+        id: playlist.id,
+        title: playlist.name,
+        thumbnail: playlist.thumbnail,
+    }));
+
+    const handlePlaylistClick = (id) => {
+        navigate(`/playlist/${id}`);
+    };
+
     return (
         <div className='profilepage-container'>
 
@@ -53,7 +67,7 @@ export default function Profile({profileimg = profile , username = 'Username' , 
 
                     <div className="profile-playlists-section">
                         <h2>My Playlists</h2>
-                        <Verticalcomponent />
+                        <Verticalcomponent recentplaylist={formattedPlaylists} onItemClick={handlePlaylistClick} />
                     </div>
                 </div>
             </div>

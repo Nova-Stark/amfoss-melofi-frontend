@@ -17,10 +17,15 @@ body {
 
 .web-header-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     position: relative;
     margin-bottom: 50px;
+    padding-top: 20px;
+}
+
+.webname {
+    flex-grow: 1;
+    text-align: center;
 }
 
 .webname h1 {
@@ -32,7 +37,7 @@ body {
 .gobackarrow {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 28px;
     background-color: #333;
     border-radius: 50%;
     padding: 8px;
@@ -48,20 +53,18 @@ body {
 }
 
 .profile-body-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 80px;
 }
 
 .profile-left-section {
-    max-width: 400px; /* Adjust as needed */
-    min-width: 300px; /* To prevent it from collapsing too much */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .profile-right-content-wrapper {
-    flex: 1; /* Takes up the remaining space */
     display: flex;
     flex-direction: column;
     gap: 40px; /* Space between "Recently Played" and "My Playlists" */
@@ -157,15 +160,19 @@ body {
     background-color: #cc0000;
 }
 
-.recently-played-section,
-.profile-playlists-section {
+.recently-played-section {
     margin: 0;
     padding: 0;
 }
 
-.recently-played-section h2,
+.profile-playlists-section {
+    padding: 0;
+    margin: 0;
+    margin-right: 5rem;
+
+}
 .profile-playlists-section h2 {
     font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
