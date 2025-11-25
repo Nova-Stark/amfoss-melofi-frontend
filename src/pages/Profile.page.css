@@ -67,7 +67,7 @@ body {
 .profile-right-content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* Space between "Recently Played" and "My Playlists" */
+    gap: 40px; 
 }
 
 .profile-section {

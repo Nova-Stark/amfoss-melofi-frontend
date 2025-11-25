@@ -192,11 +192,11 @@
 
 .playlistCard {
     width: 100%;
-    box-sizing: border-box; /* To include padding in the 100% width */
+    box-sizing: border-box; 
 }
 
 .playlistCard:hover {
-    width: 100%; /* Override hover effect from SongCard.module.css */
-    transform: scale(1.02); /* A little pop effect instead */
+    width: 100%; 
+    transform: scale(1.02); 
     background-color: #31313f;
 }
