@@ -1,9 +1,10 @@
 import styles from "./SongCard.module.css";
 import thumbnail from "../assets/thumbnail.jpg";
 import playIcon from "../assets/playicon.svg";
+import plusIcon from "../assets/plus.png";
 
 export default function SongCard({ onClick , song = "Songname", artist = "Artist" , duraction = "00:00" ,
-    link = thumbnail, isPlaying = false, className = '', thumbnailClassName = ''
+    link = thumbnail, isPlaying = false, className = '', thumbnailClassName = '', onAddToPlaylist
 }) {
 return (
     
@@ -28,6 +29,7 @@ return (
                     <span className={styles['song-duration']}>
                         {duraction}
                     </span>
+                    <img src={plusIcon} alt="add to playlist" className={styles.plusIcon} onClick={onAddToPlaylist} />
                 </div>
                 
                 </div>

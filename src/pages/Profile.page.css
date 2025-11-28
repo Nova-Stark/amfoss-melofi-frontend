@@ -36,7 +36,7 @@ body {
 
 .gobackarrow {
     position: absolute;
-    right: 0;
+    left: 0;
     top: 28px;
     background-color: #333;
     border-radius: 50%;

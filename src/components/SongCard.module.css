@@ -83,3 +83,10 @@
     height: 12px;
     margin-bottom: 4px;
 }
+
+.plusIcon {
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+    cursor: pointer;
+}
